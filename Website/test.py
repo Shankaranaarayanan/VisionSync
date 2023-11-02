@@ -3,9 +3,13 @@ import cv2
 
 img = cv2.imread('uploads\\billboard.jpg',1)
 gray = cv2.cvtColor(img, cv2.COLOR_BGR2GRAY)
+cv2.imshow('img',gray)
+cv2.waitKey(0)
 
 # inverse binary
 th = cv2.threshold(gray,127,255,cv2.THRESH_BINARY_INV+cv2.THRESH_OTSU)[1]
+cv2.imshow('img',th)
+cv2.waitKey(0)
 
 # find contours and sort them from left to right
 contours, hierarchy = cv2.findContours(th, cv2.RETR_EXTERNAL, cv2.CHAIN_APPROX_NONE)
@@ -22,7 +26,7 @@ for i, c in enumerate(contours):
     # feed cropped image to easyOCR module
     # results = reader.readtext(crop_img)
     cv2.imshow('img',crop_img)
-    cv2.waitKey
+    cv2.waitKey(0)
 
     # result is output per line
     # create a list to append all lines in cropped image to it

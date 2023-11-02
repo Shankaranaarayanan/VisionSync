@@ -10,10 +10,12 @@ ocr = PaddleOCR(use_angle_cls=True, lang='en') # need to run only once to downlo
 
 def get_result(imagepath, resultpath):
     result = ocr.ocr(imagepath, cls=True)
+    text = ''
     for idx in range(len(result)):
         res = result[idx]
         for line in res:
             print(line)
+            text += line[1][0]
     result = result[0]
     image = Image.open(imagepath).convert('RGB')
     boxes = [line[0] for line in result]
