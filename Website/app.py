@@ -7,7 +7,7 @@ from module.textDetection import get_result
 UPLOAD_FOLDER = os.path.join(os.getcwd()+'\\uploads')
 STATIC_FOLDER = 'static'
 resultpath = os.path.join(STATIC_FOLDER, 'result.jpg')
-ALLOWED_EXTENSIONS = {'txt', 'pdf', 'png', 'jpg', 'jpeg', 'gif'}
+ALLOWED_EXTENSIONS = {'txt', 'pdf', 'png', 'jpg', 'jpeg', 'gif','avif'}
 
 
 
