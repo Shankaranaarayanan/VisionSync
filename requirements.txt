@@ -3,3 +3,4 @@ werkzeug
 opencv-python
 paddlepaddle
 paddleocr
+deepface

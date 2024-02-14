@@ -8,7 +8,7 @@ from module.processing_image import Preprocess
 from module.visualizing_image import SingleImageViz
 from module.modeling_frcnn import GeneralizedRCNN
 from module.utils import Config
-import utils
+import module.utils as utils
 from transformers import LxmertForQuestionAnswering, LxmertTokenizer
 import wget
 import pickle

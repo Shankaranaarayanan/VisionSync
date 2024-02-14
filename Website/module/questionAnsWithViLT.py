@@ -3,9 +3,9 @@ import requests
 from PIL import Image
 
 # prepare image + question
-url = "/home/shankar-pt-7332/Documents/PersonalProjects/VisionSync/Images/billboard.jpg"
+url = "/home/shankar-pt-7332/Documents/PersonalProjects/VisionSync/Images/1516606594.jpg"
 image = Image.open(url)
-text = "What is in the image"
+text = "Describe the image"
 
 processor = ViltProcessor.from_pretrained("dandelin/vilt-b32-finetuned-vqa")
 model = ViltForQuestionAnswering.from_pretrained("dandelin/vilt-b32-finetuned-vqa")

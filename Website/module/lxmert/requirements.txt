@@ -89,6 +89,7 @@ torchvision
 tornado
 tqdm
 traitlets
+    transformers
 # git+https://github.com/huggingface/transformers.git
 urllib3
 wcwidth

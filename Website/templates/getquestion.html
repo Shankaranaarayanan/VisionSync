@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Upload new File</title>
+</head>
+<body>
+    {% for msg in get_flashed_messages() %}
+    <script>
+        alert('{{msg}}');
+    </script>
+    {% endfor %}
+
+    {{len}}
+    {{qns}}
+    {{res}}
+
+    <h1>Enter the question : </h1>
+    <form method=post>
+        <input type=text name=question>
+        <button type="submit">ASK</button>
+    </form>
+</body>
+</html>
