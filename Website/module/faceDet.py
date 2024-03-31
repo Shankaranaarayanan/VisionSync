@@ -53,7 +53,7 @@ def get_face(image_path):
 	#     if isfile(join(DB_FOLDER, f)):
 
     print(face_path)
-    return DeepFace.find(img_path=face_path, db_path = DB_FOLDER,enforce_detection=False, model_name="VGG-Face")
+    return DeepFace.find(img_path=face_path, db_path = DB_FOLDER,enforce_detection=False, model_name="Facenet512")
 	# return DeepFace.stream(db_path = “C:/facial_db”)
 
 
