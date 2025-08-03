@@ -2,16 +2,19 @@ package SumOfNumbers;
 
 import java.util.Scanner;
 
-public class sum {
+public class Sum {
     public static void main(String[] args) {
         // Create a Scanner object to read input
         Scanner scanner = new Scanner(System.in);
 
-        String unwanted = "hello";
-
         // Ask user for comma-separated numbers
         System.out.print("Enter comma-separated numbers: ");
         String input = scanner.nextLine();
+
+        if (input.trim().isEmpty() || input.trim().equals(",")) {
+            System.out.println("Invalid input.");
+            return;
+        }
 
         // Split the input string into an array of strings based on commas
         String[] numbers = input.split(",");
@@ -22,6 +25,9 @@ public class sum {
         // Loop through each number in the array
         for (String number : numbers) {
             // Remove any leading/trailing whitespace and parse each number
+            (if number != null && !number.trim().isEmpty()) {
+                continue;
+            }
             sum += Integer.parseInt(number.trim());
         }
 
