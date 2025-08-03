@@ -11,10 +11,6 @@ public class Sum {
         System.out.print("Enter comma-separated numbers: ");
         String input = scanner.nextLine();
 
-        if (input.trim().isEmpty() || input.trim().equals(",")) {
-            System.out.println("Invalid input.");
-            return;
-        }
 
         // Split the input string into an array of strings based on commas
         String[] numbers = input.split(",");
